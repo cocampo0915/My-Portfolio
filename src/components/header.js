@@ -6,7 +6,7 @@ const Header = (props) => (
     <StyledHeader>
         <h1>
             <Link to="/">
-                Camille Ocampo
+                Camille JS
             </Link>
         </h1>
         <nav>
@@ -16,6 +16,15 @@ const Header = (props) => (
                 </li>
                 <li>
                     <Link to="/about">About</Link>
+                </li>
+                <li>
+                    <Link to="/projects">Projects</Link>
+                </li>
+                <li>
+                    <Link to="/blog">Blog</Link>
+                </li>
+                <li>
+                    <Link to="/contact">Contact Me</Link>
                 </li>
             </ul>
         </nav>
