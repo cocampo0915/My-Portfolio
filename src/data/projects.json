@@ -1,21 +1,28 @@
 [
     {
-        "title": "First Project",
-        "description": "This was my first project",
+        "title": "ALITR",
+        "description": "A job application tracker app developed with Django",
         "githubLink": "https://github.com/myDeveloperJourney",
         "deployedLink": "https://supercoolsite.com",
         "image": "images/alitr-homepage.png"
     },
     {
-        "title": "Second Project",
-        "description": "This was my Second project",
+        "title": "LEVELUP Apparel",
+        "description": "An online storefront for a gamer apparel brand built with React",
         "githubLink": "https://github.com/myDeveloperJourney",
         "deployedLink": "https://supercoolsite.com",
         "image": "images/alitr-homepage.png"
     },
     {
-        "title": "Third Project",
-        "description": "This was my Third project",
+        "title": "Gastronaut",
+        "description": "A full stack web application built with MongoDB, Express, and Node",
+        "githubLink": "https://github.com/myDeveloperJourney",
+        "deployedLink": "https://supercoolsite.com",
+        "image": "images/alitr-homepage.png"
+    },
+    {
+        "title": "Hangry App",
+        "description": "A single page frontend only web application built with the basics: HTML, CSS, and JavaScript",
         "githubLink": "https://github.com/myDeveloperJourney",
         "deployedLink": "https://supercoolsite.com",
         "image": "images/alitr-homepage.png"

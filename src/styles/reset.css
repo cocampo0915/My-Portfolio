@@ -36,6 +36,16 @@ summary {
     display: block;
 }
 
+main {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+section {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
 audio,
 canvas,
 progress,
