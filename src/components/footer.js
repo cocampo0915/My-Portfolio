@@ -3,7 +3,7 @@ import { StyledFooter } from '../styles/styled-components'
 
 const Footer = (props) => (
     <StyledFooter>
-        <p>All Rights Reserved &copy; {new Date().getFullYear()}</p>
+        <p>Created by Camille Ocampo &copy; {new Date().getFullYear()} All Rights Reserved</p>
     </StyledFooter>
 )
 

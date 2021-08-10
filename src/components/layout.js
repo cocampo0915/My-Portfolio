@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './header'
 import Footer from './footer'
 import '../styles/reset.css'
+import 'bootstrap/dist/css/bootstrap.css'
 import { StyledLayout } from '../styles/styled-components'
 
 const Layout = (props) => {
