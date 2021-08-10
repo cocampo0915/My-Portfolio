@@ -40,14 +40,3 @@ module.exports.createPages = async ({ graphql, actions }) => {
         })
     })
 }
-
-module.exports.onCreateWebpackConfig = ({
-    actions,
-}) => {
-    const { setWebpackConfig } = actions;
-    setWebpackConfig({
-        externals: {
-            jquery: 'jQuery',
-        }
-    })
-}
