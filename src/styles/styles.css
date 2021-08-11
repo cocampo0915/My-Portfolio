@@ -14,16 +14,27 @@ p {
 
 a {
     text-decoration: none;
+    transition: all .1s ease-in-out;
 }
 
 a:hover {
     color: orange;
-    transition: 500ms;
+    transform: scale(1.1);
+}
+
+li.header-links,
+svg.social-icons {
+    transition: all .1s ease-in-out;
+}
+
+
+svg.social-icons:hover {
+    transform: scale(1.1);
 }
 
 li.header-links:hover {
     color: rgb(0, 163, 147);
-    transition: 300ms;
+    transform: scale(1.1);
 }
 
 button {
@@ -41,12 +52,16 @@ button:hover,
 button>a:hover {
     background-color: rgb(132, 173, 169);
     color: #fff;
-    transition: 600ms;
+    transition: 300ms;
 }
 
 hr {
     width: 100%;
     margin: 1rem 0 1rem 0;
+}
+
+.project-card {
+    margin: 2rem 0 2rem 0;
 }
 
 .trans--grow {
@@ -91,12 +106,18 @@ hr {
     }
 }
 
-#profile-picture {
+#profile-picture,
+#profile-picture-2 {
     text-align: center;
 }
 
 #profile-picture>img {
     border-radius: 50%;
+    width: 400px;
+    height: auto;
+}
+
+#profile-picture-2>img {
     width: 400px;
     height: auto;
 }

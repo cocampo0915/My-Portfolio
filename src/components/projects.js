@@ -14,7 +14,7 @@ const Projects = (props) => (
             {
                 projects.map((project, idx) => {
                     return (
-                        <article className="container" key={idx}>
+                        <article className="container project-card" key={idx}>
                             <div className="row center-block">
                                 <div className="col-lg-6 center-block">
                                     <img className="img-responsive" src={project.image} alt={project.title} />
@@ -24,7 +24,7 @@ const Projects = (props) => (
                                     <p>{project.description}</p>
                                     <div id="project-links">
                                         <p style={{ alignSelf: "flex-end" }}>
-                                            <a href={project.deployedLink}>Live</a> | <a href={project.githubLink}>Github</a>
+                                            <a href={project.deployedLink} target="_blank">Live</a> | <a href={project.githubLink} target="_blank">Github</a>
                                         </p>
                                     </div>
                                 </div>
