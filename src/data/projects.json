@@ -1,30 +1,30 @@
 [
     {
         "title": "ALITR",
-        "description": "A job application tracker app developed with Django",
+        "description": "A job application tracker app developed with Django and Python",
         "githubLink": "https://github.com/myDeveloperJourney",
         "deployedLink": "https://supercoolsite.com",
         "image": "images/alitr-homepage.png"
     },
     {
         "title": "LEVELUP Apparel",
-        "description": "An online storefront for a gamer apparel brand built with React",
-        "githubLink": "https://github.com/myDeveloperJourney",
-        "deployedLink": "https://supercoolsite.com",
-        "image": "images/alitr-homepage.png"
+        "description": "An online storefront for a gamer apparel brand built with MongoDB, Express, React, and Node",
+        "githubLink": "https://github.com/cocampo0915/LEVELUP-Apparel---Frontend/tree/master",
+        "deployedLink": "https://levelup-apparel.netlify.app/",
+        "image": "images/levelup-homepage.png"
     },
     {
         "title": "Gastronaut",
         "description": "A full stack web application built with MongoDB, Express, and Node",
-        "githubLink": "https://github.com/myDeveloperJourney",
-        "deployedLink": "https://supercoolsite.com",
-        "image": "images/alitr-homepage.png"
+        "githubLink": "https://github.com/cocampo0915/Gastronaut",
+        "deployedLink": "https://gastronaut-app.herokuapp.com/",
+        "image": "images/gastronaut-homepage.png"
     },
     {
         "title": "Hangry App",
-        "description": "A single page frontend only web application built with the basics: HTML, CSS, and JavaScript",
-        "githubLink": "https://github.com/myDeveloperJourney",
-        "deployedLink": "https://supercoolsite.com",
-        "image": "images/alitr-homepage.png"
+        "description": "A single page frontend-only web application built with the basics: HTML, CSS, and JavaScript",
+        "githubLink": "https://github.com/cocampo0915/Hangry-App",
+        "deployedLink": "https://hangryapp.netlify.app/",
+        "image": "images/hangry-homepage.png"
     }
 ]

@@ -19,7 +19,7 @@ const Head = ({ page }) => {
             <meta name="description" content={description} />
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-            <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Megrim&family=Montserrat&family=Parisienne&display=swap" rel="stylesheet" />
         </Helmet>
     )
 }

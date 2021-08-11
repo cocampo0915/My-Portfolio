@@ -4,18 +4,18 @@ import { Link } from 'gatsby'
 
 const Header = (props) => (
     <StyledHeader>
-        <h1>
-            <Link to="/">
-                Camille JS
-            </Link>
-        </h1>
+        <Link to="/">
+            <h1 id="header-logo">
+                Camille Codes
+            </h1>
+        </Link>
         <nav>
             <ul>
-                <li>
-                    <Link to="/about">About</Link>
+                <li className="header-links">
+                    <Link to="/about">ABOUT</Link>
                 </li>
-                <li>
-                    <Link to="/contact">Contact Me</Link>
+                <li className="header-links">
+                    <Link to="/contact">CONTACT</Link>
                 </li>
             </ul>
         </nav>

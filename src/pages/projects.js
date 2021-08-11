@@ -4,7 +4,7 @@ import Head from "../components/head"
 import projects from "../data/projects.json"
 
 
-const Projects = () => {
+const ProjectPage = () => {
   return (
     <Layout>
       <Head page="Projects" />
@@ -29,4 +29,4 @@ const Projects = () => {
   )
 }
 
-export default Projects
+export default ProjectPage

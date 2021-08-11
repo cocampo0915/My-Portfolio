@@ -4,17 +4,18 @@ export const StyledHeader = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #333;
-    color: #fff;
+    background-image: linear-gradient(to right, #222, #fff);
+    color: #444;
     height: 5rem;
     padding: 0 1rem;
-    box-shadow: 1px 1px 3px 1px #808080;
     h1 {
         margin: 0;
+        font-family: "Megrim" !important;
     }
     a {
         text-decoration: none;
         color: inherit;
+        font-family: "Montserrat";
     }
     nav {
         display: flex;
@@ -40,6 +41,7 @@ export const StyledFooter = styled.footer`
     align-items: center;
     justify-content: center;
     height: 5rem;
+    margin-bottom: 2rem;
     p {
         margin: 0;  
     }

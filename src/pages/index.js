@@ -1,39 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react'
-import { ReactDOM } from 'react-dom'
+import React from 'react'
 import Layout from '../components/layout'
 import Head from '../components/head'
-import projects from '../data/projects.json'
+import Projects from '../components/projects'
+import Skills from '../components/skills'
 import '../styles/styles.css'
 
-function FadeInSection(props) {
-  const [isVisible, setVisible] = useState(false);
-  const domRef = useRef();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        console.log(`entry`, entry, `is = ${entry.isIntersecting}`);
-        setVisible(entry.isIntersecting);
-      });
-    });
-
-    const { current } = domRef;
-    observer.observe(current);
-
-    return () => observer.unobserve(current);
-  }, []);
-  return (
-    <div
-      className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
-      ref={domRef}
-    >
-      {props.children}
-    </div>
-  );
-}
-
 const IndexPage = () => {
-  const [isShown, setIsShown] = useState(true);
 
   return (
     <Layout>
@@ -41,67 +13,25 @@ const IndexPage = () => {
 
       <section className="container" id="about-me">
         <div className="row">
-          <div className="col-lg-6" id="profile-picture">
+          <div className="col-lg-5" id="profile-picture">
             <img src="/images/profile-pic.jpeg" alt="profile picture" />
           </div>
-          <div className="col-lg-6" id="brand-statement">
-            <h1 className="text-center">Hello, I'm Camille Ocampo!</h1>
+          <div className="col-lg-7 text-center" id="brand-statement">
+            <h1>Hello, I'm Camille Ocampo!</h1>
             <p>
               I am a software engineer and scientist with a passion for learning new things and tackling problems. With strong analytical skills, adaptive thinking, and creativity cultivated throughout my career, I welcome challenges as opportunities to showcase my best self, and to grow personally and professionally. Technology is constantly changing and evolving, and with it I strive to make meaningful change and a positive impact through software development.
             </p>
             <br />
-            <p>See My <a href="/images/resume.pdf" target="_blank">Resume</a></p>
+            <a href="/images/resume.pdf" target="_blank">
+              <button>
+                View My Resume
+              </button>
+            </a>
           </div>
         </div>
       </section>
-
-      <FadeInSection>
-        <section className="container tag" id="projects" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "space-evenly" }}>
-          <div style={{ display: "inherit", textAlign: "left" }}>
-            <h1 id="projects-header">Projects</h1>
-          </div>
-          {
-            projects.map((project, idx) => {
-              return (
-                <article className="container" key={idx}>
-                  <div className="row">
-                    <div className="col-lg-6">
-                      <img className="center-block" src={project.image} alt={project.title} />
-                    </div>
-                    <div className="col-lg-6 center-block">
-                      <h2>{project.title}</h2>
-                      <p>{project.description}</p>
-                      <div className="row">
-                        <p>
-                          <a href={project.deployedLink}>Live</a> <a href={project.githubLink}>Github</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              )
-            }
-            )
-          }
-        </section>
-      </FadeInSection>
-      <FadeInSection>
-        <section className="container tag" id="skills">
-          <h1>Skills</h1>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>MongoDB</li>
-            <li>Express</li>
-            <li>ReactJS</li>
-            <li>NodeJS</li>
-            <li>Python</li>
-            <li>Django</li>
-            <li>SQL</li>
-          </ul>
-        </section>
-      </FadeInSection>
+      <Projects />
+      <Skills />
     </Layout>
   )
 }
