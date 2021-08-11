@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { ReactDOM } from 'react-dom'
 import Layout from '../components/layout'
 import Head from '../components/head'
@@ -45,7 +45,7 @@ const IndexPage = () => {
             <img src="/images/profile-pic.jpeg" alt="profile picture" />
           </div>
           <div className="col-lg-6" id="brand-statement">
-            <h1>Hello, I'm Camille Ocampo!</h1>
+            <h1 className="text-center">Hello, I'm Camille Ocampo!</h1>
             <p>
               I am a software engineer and scientist with a passion for learning new things and tackling problems. With strong analytical skills, adaptive thinking, and creativity cultivated throughout my career, I welcome challenges as opportunities to showcase my best self, and to grow personally and professionally. Technology is constantly changing and evolving, and with it I strive to make meaningful change and a positive impact through software development.
             </p>
@@ -56,22 +56,27 @@ const IndexPage = () => {
       </section>
 
       <FadeInSection>
-        <section class="tag" id="projects" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "space-evenly" }}>
+        <section className="container tag" id="projects" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "space-evenly" }}>
           <div style={{ display: "inherit", textAlign: "left" }}>
-            <h1>Projects</h1>
+            <h1 id="projects-header">Projects</h1>
           </div>
           {
             projects.map((project, idx) => {
               return (
-                <article key={idx} style={{ display: "flex", flexDirection: "row", width: "100%" }}>
-                  <div style={{ display: "inherit", margin: "2rem", width: "50%", justifyContent: "center" }}>
-                    <img style={{ height: 175, border: "2px solid #333" }} src={project.image} alt={project.title} />
-                  </div>
-                  <div style={{ display: "inherit", margin: "2rem", width: "50%", justifyContent: "center", flexDirection: "column" }}>
-                    <h2>{project.title}</h2>
-                    <p>{project.description}</p>
-                    <a href={project.githubLink}>View On Github</a>
-                    <a href={project.deployedLink}>View Deployed Project</a>
+                <article className="container" key={idx}>
+                  <div className="row">
+                    <div className="col-lg-6">
+                      <img className="center-block" src={project.image} alt={project.title} />
+                    </div>
+                    <div className="col-lg-6 center-block">
+                      <h2>{project.title}</h2>
+                      <p>{project.description}</p>
+                      <div className="row">
+                        <p>
+                          <a href={project.deployedLink}>Live</a> <a href={project.githubLink}>Github</a>
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </article>
               )
@@ -81,7 +86,7 @@ const IndexPage = () => {
         </section>
       </FadeInSection>
       <FadeInSection>
-        <section class="tag" id="skills">
+        <section className="container tag" id="skills">
           <h1>Skills</h1>
           <ul>
             <li>HTML</li>

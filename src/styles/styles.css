@@ -23,12 +23,16 @@ body {
 
 #profile-picture>img {
     border-radius: 50%;
-    height: 400px;
     width: 400px;
+    height: auto;
 }
 
 #brand-statement {
     margin: auto;
+}
+
+#projects-header {
+    margin-bottom: 2rem;
 }
 
 .fade-in-section {
@@ -44,4 +48,20 @@ body {
     opacity: 1;
     transform: none;
     visibility: visible;
+}
+
+@media only screen and (max-width: 1024px) {
+    main {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    main {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
 }

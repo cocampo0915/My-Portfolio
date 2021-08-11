@@ -56,8 +56,3 @@ export const StyledLayout = styled.div`
         padding: 1rem;
     }
 `
-export const StyledProfilePic = styled.img`
-    border-radius: 50%;
-    width: 300px;
-`
-
