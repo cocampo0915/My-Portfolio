@@ -4,27 +4,27 @@
         "description": "A job application tracker app developed with Django and Python",
         "githubLink": "https://github.com/cocampo0915/Alitr",
         "deployedLink": "https://alitr.herokuapp.com",
-        "image": "images/alitr-homepage.png"
+        "image": "/images/alitr-homepage.png"
     },
     {
         "title": "LEVELUP Apparel",
         "description": "An online storefront for a gamer apparel brand built with MongoDB, Express, React, and Node",
         "githubLink": "https://github.com/cocampo0915/LEVELUP-Apparel---Frontend/tree/master",
         "deployedLink": "https://levelup-apparel.netlify.app/",
-        "image": "images/levelup-homepage.png"
+        "image": "/images/levelup-homepage.png"
     },
     {
         "title": "Gastronaut",
         "description": "A full stack web application built with MongoDB, Express, and Node",
         "githubLink": "https://github.com/cocampo0915/Gastronaut",
         "deployedLink": "https://gastronaut-app.herokuapp.com/",
-        "image": "images/gastronaut-homepage.png"
+        "image": "/images/gastronaut-homepage.png"
     },
     {
         "title": "Hangry App",
         "description": "A single page frontend-only web application built with the basics: HTML, CSS, and JavaScript",
         "githubLink": "https://github.com/cocampo0915/Hangry-App",
         "deployedLink": "https://hangryapp.netlify.app/",
-        "image": "images/hangry-homepage.png"
+        "image": "/images/hangry-homepage.png"
     }
 ]

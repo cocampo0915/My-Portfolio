@@ -41,7 +41,7 @@ export const StyledFooter = styled.footer`
     align-items: center;
     justify-content: center;
     height: 5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     p {
         margin: 0;  
     }
