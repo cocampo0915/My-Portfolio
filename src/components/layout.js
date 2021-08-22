@@ -4,10 +4,12 @@ import Footer from './footer'
 import '../styles/reset.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import { StyledLayout } from '../styles/styled-components'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 const Layout = (props) => {
     return (
         <>
+        <Router>
             <StyledLayout>
                 <Header />
                 <div>
@@ -17,6 +19,7 @@ const Layout = (props) => {
                 </div>
                 <Footer />
             </StyledLayout>
+        </Router>
         </>
     )
 }
