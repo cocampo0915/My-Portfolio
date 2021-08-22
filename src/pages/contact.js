@@ -1,79 +1,58 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Head from '../components/head'
 import Layout from '../components/layout'
-import { navigate } from 'gatsby-link'
+import { useForm, ValidationError } from '@formspree/react'
 
 const Contact = (props) => {
-    const [ formState, setFormState ] = useState({
-        name: "",
-        email: "",
-        message: "",
-    })
-
-    const encode = (data) => {
-        return Object.keys(data).map(key => (
-            `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-        )).join('&')
-    }
-
-    const handleChange = (e) => {
-        setFormState({...formState, [e.target.name]: e.target.value })
-    }
-
-    const handleSubmit = async (e) => {
-        e.preventDefault()
-        await fetch('/contact', {
-            method: 'POST',
-            headers: {
-                'Content-type': 'application/x-www-form-urlencoded'
-            },
-            body: `form-name=contact&name=${encodeURIComponent(formState.name)}&email=${encodeURIComponent(formState.email)}&message=${encodeURIComponent(formState.message)}`
-        })
-        setFormState({
-            name: "",
-            email: "",
-            message: "",
-        })
-        navigate('/')
+    const [state, handleSubmit] = useForm("mwkawaye");
+    if (state.succeeded) {
+        return <p>Thanks for contacting!</p>;
     }
 
     return (
         <Layout>
             <Head page="Contact" />
-            <h1>Contact</h1>
-            <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
-                <input type="hidden" name="form-name" value="contact" />
-                <label>
-                    Name:
-                    <input 
-                        type="text" 
-                        name="text"
-                        placeholder="Johnny Appleseed"
-                        onChange={handleChange} 
-                        value={formState.name}    
-                    />
-                </label>
-                <label>
-                    Email:
-                    <input 
-                        type="email" 
-                        name="email"
-                        placeholder="johnny@apple.com"
-                        onChange={handleChange}
-                        value={formState.email} 
-                    />
-                </label>
-                <label>
-                    Message:
-                    <textarea 
-                        name="message"
-                        placeholder="Hey what's up"
-                        onChange={handleChange}
-                        value={formState.message}
-                    ></textarea>
-                </label>
-                <input type="submit" value="Contact Me" />
-            </form>
+            <section className="contact-page fade-in">
+                <article className="contact-form">
+                    <h3>Contact Me!</h3>
+                    <form onSubmit={handleSubmit}>
+                        <div className="form-group">
+                            <input 
+                                    id="name"
+                                    type="name" 
+                                    name="name"
+                                    placeholder="name"  
+                                    className="form-control"
+                            />
+                            <input 
+                                    id="email"
+                                    type="email" 
+                                    name="email"
+                                    placeholder="email"
+                                    className="form-control"
+                            />
+                            <ValidationError
+                                prefix="Email"
+                                field="email"
+                                errors={state.errors}
+                            />
+                            <textarea 
+                                id="message"
+                                name="message"
+                                rows="5"
+                                placeholder="message"
+                                className="form-control"
+                            />
+                            <ValidationError
+                                prefix="Message"
+                                field="message"
+                                errors={state.errors}
+                            />
+                        </div>
+                        <button type="submit" disabled={state.submitting}>Submit</button>
+                    </form>
+                </article>
+            </section>
         </Layout>
     )
 }

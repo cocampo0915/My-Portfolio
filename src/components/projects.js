@@ -8,7 +8,7 @@ const Projects = (props) => (
     <FadeInSection>
         <section className="container tag" id="projects" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
             <div style={{ display: "flex", alignItems: "center" }}>
-                <h1 id="projects-header">Projects</h1>
+                <h1 id="projects-header">{props.header}</h1>
             </div>
             <hr></hr>
             {
@@ -24,7 +24,7 @@ const Projects = (props) => (
                                     <p>{project.description}</p>
                                     <div id="project-links">
                                         <p style={{ alignSelf: "flex-end" }}>
-                                            <a href={project.deployedLink} target="_blank">Live</a> | <a href={project.githubLink} target="_blank">Github</a>
+                                            <a href={project.deployedLink} target="_blank" rel="noreferrer">Live</a> | <a href={project.githubLink} target="_blank" rel="noreferrer">Github</a>
                                         </p>
                                     </div>
                                 </div>

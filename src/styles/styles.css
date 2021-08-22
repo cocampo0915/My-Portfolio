@@ -9,7 +9,7 @@ h1 {
 }
 
 p {
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 a {
@@ -22,14 +22,12 @@ a:hover {
     transform: scale(1.1);
 }
 
-li.header-links,
-svg.social-icons {
+/* Header Links */
+
+li.header-links {
+    letter-spacing: 0.3ch;
+    margin: 0 1rem 0 1rem;
     transition: all .1s ease-in-out;
-}
-
-
-svg.social-icons:hover {
-    transform: scale(1.1);
 }
 
 li.header-links:hover {
@@ -37,22 +35,64 @@ li.header-links:hover {
     transform: scale(1.1);
 }
 
-button {
-    border-radius: 2%;
-    border: 1px solid gray;
-    background-color: #fff;
-    font-size: 0.8rem;
+/* Social Media Icons */
+.sm a{
+    display: inline-block;
+    font-size: 50px;
+    height: 100px;
+    width: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin: 0 10px;
+    position: relative;
 }
 
-button>a {
-    color: black;
+.sm a::before, .sm a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    left:0; 
+    top:0;
 }
 
-button:hover,
-button>a:hover {
-    background-color: rgb(132, 173, 169);
+.sm a:hover{
+    transform: scale(.8);
+    transition: .3s linear;
+}
+
+.sm a:hover::before{
+border-left: 1px solid #5daca8;
+border-right: 1px solid #5daca8;
+transform: skewX(20deg);
+transition: .3s linear;
+}
+
+.sm a:hover::after{
+    border-top: 1px solid #5daca8;
+    border-bottom: 1px solid #5daca8;
+    transform: skewY(-20deg);
+    transition: .3s linear;
+}
+
+#resume, button {
+    color: #000;
+    padding: 0.5em;
+    text-decoration: none;
+    transition: all 300ms ease-out;
+    box-shadow: inset 0 -0.em 0 0 #000;
+    border: 1px solid #000;
+}
+
+#resume:hover {
     color: #fff;
-    transition: 300ms;
+    box-shadow: inset 0 -2.3em 0 0 #000;
+}
+
+button:hover {
+    color: #fff;
+    box-shadow: inset 0 -2.5em 0 0 #000;
 }
 
 hr {
@@ -71,6 +111,10 @@ hr {
     width: 0%;
 }
 
+.project-image {
+    max-width: 400px;
+}
+
 .skills-list {
     margin-left: 0;
 }
@@ -79,9 +123,6 @@ hr {
     list-style-type: circle;
 }
 
-.project-image {
-    max-width: 400px;
-}
 
 #header-logo {
     font-family: "Megrim";
@@ -90,10 +131,10 @@ hr {
     margin: 0 auto;
 }
 
-#about-me {
+.fade-in {
     margin-top: 0rem;
-    animation: fadein 2s;
-    -webkit-animation: fadein 2s;
+    animation: fadein 1.5s;
+    -webkit-animation: fadein 1.5s;
 }
 
 @keyframes fadein {
@@ -130,6 +171,42 @@ hr {
     display: flex;
 }
 
+/* Contact Form */
+.contact-page {
+    display: grid;
+    place-items: center;
+    padding: 5rem 0;
+}
+
+.contact-form {
+    background: #fff;
+    border-radius: 0.25rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s linear;
+    width: 90vw;
+    max-width: 35rem;
+}
+.form-group {
+    padding: 1rem 1.5rem;
+  }
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgb(128, 128, 128);
+    margin-bottom: 1.25rem;
+    background: hsl(210, 36%, 96%);
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+  }
+  .form-control::placeholder {
+    color: hsl(195, 7%, 58%);
+    text-transform: uppercase;
+  }
+/* Fade-in Section */
+
 .fade-in-section {
     opacity: 0;
     transform: translateY(20vh);
@@ -145,6 +222,7 @@ hr {
     visibility: visible;
 }
 
+/* Tablet View */
 @media only screen and (max-width: 1024px) {
     main {
         margin-left: 1rem;
@@ -153,11 +231,14 @@ hr {
     }
 }
 
+/* Mobile View  */
 @media only screen and (max-width: 400px) {
     main {
         margin-left: 0;
         margin-right: 0;
         padding: 0;
     }
-
+    .navbar {
+        visibility: hidden;
+    }
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyledHeader } from '../styles/styled-components'
 import { Link } from 'gatsby'
+import Navbar from './navbar'
 
 const Header = (props) => (
     <StyledHeader>
@@ -9,16 +10,7 @@ const Header = (props) => (
                 Camille Codes
             </h1>
         </Link>
-        <nav>
-            <ul>
-                <li className="header-links">
-                    <Link to="/about">ABOUT</Link>
-                </li>
-                <li className="header-links">
-                    <Link to="/contact">CONTACT</Link>
-                </li>
-            </ul>
-        </nav>
+        <Navbar />
     </StyledHeader>
 )
 
