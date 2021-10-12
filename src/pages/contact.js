@@ -2,7 +2,7 @@ import React from 'react'
 import Head from '../components/head'
 import Layout from '../components/layout'
 import { useForm, ValidationError } from '@formspree/react'
-import Success from './success'
+import Success from '../components/success'
 
 const Contact = (props) => {
     const [state, handleSubmit] = useForm("mwkawaye");

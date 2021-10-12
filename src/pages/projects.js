@@ -8,7 +8,7 @@ const ProjectPage = () => {
   return (
     <Layout>
       <Head page="Projects" />
-      <Projects header="All Projects" />
+      <Projects header="All Projects" url="/" />
     </Layout>
   )
 }
