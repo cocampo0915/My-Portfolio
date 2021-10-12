@@ -2,13 +2,13 @@ import React from 'react'
 import Head from '../components/head'
 import Layout from '../components/layout'
 import { useForm, ValidationError } from '@formspree/react'
-import SuccessPage from './success'
+import Success from './success'
 
-const Contact = (props) => {
+const Contact = () => {
     const [state, handleSubmit] = useForm("mwkawaye");
     if (state.succeeded) {
         return (
-            <SuccessPage />
+            <Success />
         )
     }
 

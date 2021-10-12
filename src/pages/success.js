@@ -3,7 +3,7 @@ import Head from '../components/head'
 import Layout from '../components/layout'
 import { Link } from 'gatsby'
 
-const SuccessPage = (props) => {
+const Success = (props) => {
     return (
             <Layout>
                 <Head page="Contact Form Submitted!" />
@@ -17,4 +17,4 @@ const SuccessPage = (props) => {
     )
 }
 
-export default SuccessPage
+export default Success
