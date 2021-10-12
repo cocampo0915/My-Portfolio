@@ -34,7 +34,7 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
-      <Projects header="Featured Projects" url="/projects"/>
+      <Projects header="Featured Projects" url="/projects/"/>
       <Skills />
       <Contact />
     </Layout>
