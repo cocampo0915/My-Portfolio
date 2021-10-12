@@ -5,7 +5,7 @@ import FadeInSection from './fadeinsection'
 
 const Skills = (props) => (
   <FadeInSection>
-    <section className="container tag" id="projects" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+    <section className="container tag" id="skills" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
       <div style={{ display: "flex", alignItems: "center" }}>
         <h1 id="skills-header">Skills</h1>
       </div>

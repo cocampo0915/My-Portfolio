@@ -1,18 +1,42 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import navLinks from '../constants/links'
+import { Link } from 'react-scroll'
 
-const Navbar = ({toggleSidebar}) => {
+const Navbar = (props) => {
     return (
         <nav className="navbar">
             <ul>
-                {navLinks.map(link => {
-                    return (
-                        <li className="header-links">
-                            <Link key={link.id} to={link.url}>{link.text}</Link>
-                        </li>
-                    )
-                })}
+                <li className="header-links">
+                <Link 
+                    to="about-me" 
+                    spy={true} 
+                    smooth={true} 
+                    offset={-120}
+                    >ABOUT</Link>
+                </li>
+                <li className="header-links">
+                    <Link 
+                    to="projects" 
+                    spy={true} 
+                    smooth={true} 
+                    offset={-120}
+                    >PROJECTS</Link>
+                </li>
+                <li className="header-links">
+                    <Link 
+                    to="skills" 
+                    spy={true} 
+                    smooth={true} 
+                    offset={-120}
+                    >SKILLS</Link>
+                </li>
+                <li className="header-links">
+                    <Link 
+                    to="contact" 
+                    spy={true} 
+                    smooth={true} 
+                    offset={-100}
+                    >CONTACT</Link>
+                </li>
             </ul>
         </nav>
     )

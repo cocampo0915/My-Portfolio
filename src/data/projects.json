@@ -1,7 +1,7 @@
 [
     {
         "title": "ALITR",
-        "description": "A job application tracker app developed with Django and Python",
+        "description": "A job application tracker app developed with Django, Python, and PostgreSQL",
         "githubLink": "https://github.com/cocampo0915/Alitr",
         "deployedLink": "https://alitr.herokuapp.com",
         "image": "/images/alitr-homepage.png"

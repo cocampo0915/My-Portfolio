@@ -1,7 +1,10 @@
 import styled from "styled-components"
 
 export const StyledHeader = styled.header`
+    position: sticky;
+    top: 0;
     display: flex;
+    z-index: 999;
     align-items: center;
     justify-content: space-between;
     background-image: linear-gradient(to right, #222, #fff);

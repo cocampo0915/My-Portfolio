@@ -5,7 +5,7 @@ import Socials from './socials'
 const Footer = (props) => (
     <StyledFooter>
         <div className="container text-center">
-            <Socials />
+            <Socials listClass="sm-static" />
         </div>
         <p class="text-center">Created by Camille Ocampo &copy; {new Date().getFullYear()} All Rights Reserved</p>
     </StyledFooter>

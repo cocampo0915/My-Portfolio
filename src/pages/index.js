@@ -4,7 +4,9 @@ import Head from '../components/head'
 import Projects from '../components/projects'
 import Skills from '../components/skills'
 import Socials from '../components/socials'
+import Contact from '../components/contact'
 import '../styles/styles.css'
+import summary from '../data/summary.json'
 
 const IndexPage = () => {
 
@@ -18,11 +20,11 @@ const IndexPage = () => {
             <img src="/images/profile-pic.jpeg" alt="profile" />
           </div>
           <div className="col-lg-7 text-center" id="brand-statement">
-            <h1>Hello, I'm Camille Ocampo!</h1>
+            <h1>{summary[0].title}</h1>
             <p>
-              I am a software engineer and scientist with a passion for learning new things and tackling problems. With strong analytical skills, adaptive thinking, and creativity cultivated throughout my career, I welcome challenges as opportunities to showcase my best self, and to grow personally and professionally. Technology is constantly changing and evolving, and with it I strive to make meaningful change and a positive impact through software development.
+              {summary[0].description}
             </p>
-            <Socials />
+            <Socials listClass="sm" />
             <br></br>
             <a href="/images/resume.pdf" target="_blank" id="resume">
              
@@ -32,8 +34,9 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
-      <Projects header="Featured Projects" />
+      <Projects header="Featured Projects" url="/projects"/>
       <Skills />
+      <Contact />
     </Layout>
   )
 }

@@ -36,7 +36,7 @@ li.header-links:hover {
 }
 
 /* Social Media Icons */
-.sm a{
+.sm a, .sm-static a{
     display: inline-block;
     font-size: 50px;
     height: 100px;
