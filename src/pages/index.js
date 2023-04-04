@@ -26,7 +26,7 @@ const IndexPage = () => {
             </p>
             <Socials listClass="sm" />
             <br></br>
-            <a href="/images/resume.pdf" target="_blank" id="resume">
+            <a href="/images/resume2023.pdf" target="_blank" id="resume">
              
                 View My Resume
               
